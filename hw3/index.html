@@ -10,18 +10,18 @@
     <h3>BMI Calculator for Adults</h3>
     <div id="begin">
         <div class="height">
-            "Height in meter:"
+            Height in meter:
             <input id="num1" type="number" value="1.6">
         </div>
         <div class="weight">
-            "Weight in KG"
+            Weight in KG:
             <input id="num2" type="number" value="50">
         </div>
         <div class="Button">
             <button id="cal">Click to calculate</button>
         </div>
         <div class="result">
-            "Your BMI is"
+            Your BMI is
             <input id="result" type="number">
         </div>
     </div>
@@ -32,15 +32,17 @@
         // b = document.getElementById("num2").value
         // result = (+a) + (+b)
 
-        a = +document.getElementById("num1").value
-        b = +document.getElementById("num2").value
-        result = (b) / (a) ^ 2
+        function calculate() {
+            a = +document.getElementById("num1").value
+            b = +document.getElementById("num2").value
+            result = (b) / (a * a)
 
-        document.getElementById("result").value = result
+            document.getElementById("result").value = result
+        }
 
-        // result = Math.pow(a, b)
-        // console.log('result:')
-        // console.log(result)
+        document.getElementById("cal").addEventListener('click', calculate) // result = Math.pow(a, b)
+            // console.log('result:')
+            // console.log(result)
     </script>
 
     <h3>Classifications</h3>
