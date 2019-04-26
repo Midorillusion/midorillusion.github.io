@@ -8,7 +8,10 @@
 
     <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,600|Montserrat:200,300,400" rel="stylesheet">
 
-
+    <script src="../Highcharts-7.0.3/code/highcharts.js"></script>
+    <script src="../Highcharts-7.0.3/code/highcharts-3d.js"></script>
+    <script src="../Highcharts-7.0.3/code/modules/exporting.js"></script>
+    <script src="../Highcharts-7.0.3/code/modules/export-data.js"></script>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -80,7 +83,6 @@
         <!-- Sad BGM -->
     </nav>
 
-
     <section class=" pb_cover_v1 text-left cover-bg-black cover-bg-opacity-4" style="background-image: url(https://midorillusion.github.io/group_project/assets/images/1931cover.jpg); background-size: 100%;" id="section-home">
         <div class="container">
             <div class="row align-items-left ">
@@ -118,11 +120,324 @@
                         <p>
                             <br> Sexual violence is any sexual act or attempt to obtain a sexual act by violence or coercion, acts to traffic a person or acts directed against a person's sexuality, regardless of the relationship to the victim.<br> It
                             occurs in times of peace and armed conflict situations, is widespread and is considered to be one of the most traumatic, pervasive, and most common human rights violations.</p>
+
+
+                        <div id="RL Trend" style="min-width: 310px; height:400px;margin:0px">
+
+                            <head>
+                                <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+                                <meta name="viewport" content="width=device-width, initial-scale=1">
+                                <title>Highcharts Example</title>
+
+                                <style type="text/css">
+
+                                </style>
+                            </head>
+
+                            <body>
+                                <div id="container1" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+                                <script type="text/javascript">
+                                    Highcharts.setOptions({
+                                        colors: ['#BE1622', '#769A99', '#3C3C3B']
+                                    });
+
+                                    Highcharts.chart('container1', {
+                                        chart: {
+                                            type: 'line'
+                                        },
+                                        title: {
+                                            text: 'Number of cases handled by RainLily per three-year period from 2000 to 2017'
+                                        },
+                                        subtitle: {
+                                            text: 'Source: RainLily'
+                                        },
+                                        xAxis: {
+                                            categories: ['2000-2002', '2003-2005', '2006-2008', '2009-2011', '2012-2014', '2015-2017']
+                                        },
+                                        yAxis: {
+                                            title: {
+                                                text: 'Number of Cases'
+                                            }
+                                        },
+                                        plotOptions: {
+                                            line: {
+                                                dataLabels: {
+                                                    enabled: true
+                                                },
+                                                enableMouseTracking: false
+                                            }
+                                        },
+                                        series: [{
+                                            name: 'Rape',
+                                            data: [128, 433, 403, 412, 428, 446]
+                                        }, {
+                                            name: 'Indecent Assault',
+                                            data: [34, 166, 194, 175, 196, 275]
+                                        }, {
+                                            name: 'Sexual Harassment',
+                                            data: [15, 24, 24, 12, 35, 92]
+                                        }]
+                                    });
+                                </script>
+                            </body>
+                        </div>
+
+
+                        <div id="perpetrator" style="min-width: 310px; height:400px;margin:0px">
+
+                            <head>
+                                <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+                                <meta name="viewport" content="width=device-width, initial-scale=1">
+                                <title>Highcharts Example</title>
+
+                                <style type="text/css">
+                                    #container2 {
+                                        max-width: 660px;
+                                        margin: auto;
+                                        height: 400px;
+                                        margin: 0 auto;
+                                    }
+                                </style>
+                            </head>
+
+                            <body>
+                                <div id="container2"></div>
+                                <script type="text/javascript">
+                                    var colors = Highcharts.setOptions({
+                                            colors: ['#BE1622', '#769A99', '#3C3C3B']
+                                        }),
+                                        categories = [
+                                            'Acquaintance',
+                                            'Stranger',
+                                            'Others'
+                                        ],
+                                        data = [{
+                                            y: 78.6,
+                                            color: '#769A99',
+                                            drilldown: {
+                                                name: 'Acquaintance',
+                                                categories: [
+                                                    'Peer or Friend',
+                                                    'Intimate Partner',
+                                                    'Work Relationship',
+                                                    'Parent, Sibling or Relative',
+                                                    'Online Acquaintance',
+                                                    'Caregiver (non-related)',
+                                                    'Neighbour'
+                                                ],
+                                                data: [
+                                                    36.3,
+                                                    21.1,
+                                                    9.4,
+                                                    8.5,
+                                                    1.2,
+                                                    0.3,
+                                                    1.7
+                                                ]
+                                            }
+                                        }, {
+                                            y: 17.5,
+                                            color: '#BE1622',
+                                            drilldown: {
+                                                name: 'Stranger',
+                                                categories: [
+                                                    'Stranger'
+                                                ],
+                                                data: [
+                                                    17.5
+                                                ]
+                                            }
+                                        }, {
+                                            y: 3.9,
+                                            color: '#3C3C3B',
+                                            drilldown: {
+                                                name: 'Others',
+                                                categories: [
+                                                    'Others'
+                                                ],
+                                                data: [
+                                                    3.9
+                                                ]
+                                            }
+                                        }],
+                                        browserData = [],
+                                        versionsData = [],
+                                        i,
+                                        j,
+                                        dataLen = data.length,
+                                        drillDataLen,
+                                        brightness;
+
+
+                                    // Build the data arrays
+                                    for (i = 0; i < dataLen; i += 1) {
+
+                                        // add browser data
+                                        browserData.push({
+                                            name: categories[i],
+                                            y: data[i].y,
+                                            color: data[i].color
+                                        });
+
+                                        // add version data
+                                        drillDataLen = data[i].drilldown.data.length;
+                                        for (j = 0; j < drillDataLen; j += 1) {
+                                            brightness = 0.2 - (j / drillDataLen) / 5;
+                                            versionsData.push({
+                                                name: data[i].drilldown.categories[j],
+                                                y: data[i].drilldown.data[j],
+                                                color: Highcharts.Color(data[i].color).brighten(brightness).get()
+                                            });
+                                        }
+                                    }
+
+                                    // Create the chart
+                                    Highcharts.chart('container2', {
+                                        chart: {
+                                            type: 'pie'
+                                        },
+                                        title: {
+                                            text: "Victim-perpetrator Relationship"
+                                        },
+                                        subtitle: {
+                                            text: 'Source: RainLily</a>'
+                                        },
+                                        plotOptions: {
+                                            pie: {
+                                                shadow: false,
+                                                center: ['50%', '50%']
+                                            }
+                                        },
+                                        tooltip: {
+                                            valueSuffix: '%'
+                                        },
+                                        series: [{
+                                            name: 'Browsers',
+                                            data: browserData,
+                                            size: '60%',
+                                            dataLabels: {
+                                                formatter: function() {
+                                                    return this.y > 5 ? this.point.name : null;
+                                                },
+                                                color: '#ffffff',
+                                                distance: -30
+                                            }
+                                        }, {
+                                            name: 'Versions',
+                                            data: versionsData,
+                                            size: '80%',
+                                            innerSize: '60%',
+                                            dataLabels: {
+                                                formatter: function() {
+                                                    // display only if larger than 1
+                                                    return this.y > 1 ? '<b>' + this.point.name + ':</b> ' +
+                                                        this.y + '%' : null;
+                                                }
+                                            },
+                                            id: 'versions'
+                                        }],
+                                        responsive: {
+                                            rules: [{
+                                                condition: {
+                                                    maxWidth: 400
+                                                },
+                                                chartOptions: {
+                                                    series: [{
+                                                        id: 'versions',
+                                                        dataLabels: {
+                                                            enabled: false
+                                                        }
+                                                    }]
+                                                }
+                                            }]
+                                        }
+                                    });
+                                </script>
+                            </body>
+                        </div>
+
+                        <div id="delay reporting" style="min-width: 310px; height:400px;margin:0px">
+
+                            <head>
+                                <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+                                <meta name="viewport" content="width=device-width, initial-scale=1">
+                                <title>Highcharts Example</title>
+
+                                <style type="text/css">
+
+                                </style>
+                            </head>
+
+                            <body>
+
+                                <div id="container3" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+
+
+
+                                <script type="text/javascript">
+                                    Highcharts.setOptions({
+                                        colors: ['#BE1622', '#769A99']
+                                    });
+
+                                    Highcharts.chart('container3', {
+                                        chart: {
+                                            type: 'bar'
+                                        },
+                                        title: {
+                                            text: 'Delay Reporting time: Below 16 VS Above 16'
+                                        },
+                                        xAxis: {
+                                            categories: [
+                                                'Age Group'
+                                            ],
+                                            crosshair: true
+                                        },
+                                        yAxis: {
+                                            min: 0,
+                                            title: {
+                                                text: 'Number of Days (Mean)'
+                                            }
+                                        },
+                                        tooltip: {
+                                            headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+                                            pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+                                                '<td style="padding:0"><b>{point.y} </b></td></tr>',
+                                            footerFormat: '</table>',
+                                            shared: true,
+                                            useHTML: true
+                                        },
+                                        plotOptions: {
+                                            column: {
+                                                pointPadding: 0.2,
+                                                borderWidth: 0
+                                            }
+                                        },
+                                        series: [{
+                                            name: 'Below 16',
+                                            data: [4814]
+
+                                        }, {
+                                            name: 'Above 16',
+                                            data: [444]
+
+                                        }]
+                                    });
+                                </script>
+                            </body>
+                        </div>
+
+
+
+
+
+
+
+
                     </div>
 
 
 
-
+                    <br><br><br>
                     <responsive-block>
                         <iframe width="560" height="315" src="https://www.youtube.com/embed/LWctQH4C0P8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></responsive-block>
 
@@ -165,15 +480,15 @@
 
                 </section>
                 <!-- END section -->
+                <section>
+                    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+                    <script src="https://code.highcharts.com/maps/highmaps.js"></script>
+                    <script src="https://code.highcharts.com/maps/modules/data.js"></script>
+                    <script src="https://code.highcharts.com/maps/modules/exporting.js"></script>
+                    <script src="https://code.highcharts.com/maps/modules/offline-exporting.js"></script>
 
-                <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-                <script src="https://code.highcharts.com/maps/highmaps.js"></script>
-                <script src="https://code.highcharts.com/maps/modules/data.js"></script>
-                <script src="https://code.highcharts.com/maps/modules/exporting.js"></script>
-                <script src="https://code.highcharts.com/maps/modules/offline-exporting.js"></script>
-
-                <div id="container0"></div>
-
+                    <div id="container0"></div>
+                </section>
                 <section>
                     <br><br>
                     <h2 class="mt-0 heading-border-top font-weight-normal"><b>Recognition and Response of Sexual Violence</b></h2>
@@ -244,17 +559,412 @@
                     <p>植入文本</p>
                     <br><br>
 
+                    <div id="correct counts" style="min-width: 310px; height:400px;margin:0px">
+
+                        <head>
+                            <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+                            <meta name="viewport" content="width=device-width, initial-scale=1">
+                            <title>Highcharts Example</title>
+
+                            <style type="text/css">
+
+                            </style>
+                        </head>
+
+                        <body>
+
+                            <div id="container4" style="height: 400px"></div>
+
+
+                            <script type="text/javascript">
+                                Highcharts.setOptions({
+                                    colors: ['#023E5C', '#769A99', '#25594B', '#455C02', '#3C3C3B', '#778CA6', '#3A93B3', '#5C4802']
+                                });
+
+                                Highcharts.chart('container4', {
+                                    chart: {
+                                        type: 'pie',
+                                        options3d: {
+                                            enabled: true,
+                                            alpha: 45
+                                        }
+                                    },
+                                    title: {
+                                        text: 'Sexual Assault Awareness'
+                                    },
+                                    subtitle: {
+                                        text: 'Numbers of Correct Answers in 8 Questions about Sexual Violation'
+                                    },
+                                    plotOptions: {
+                                        pie: {
+                                            innerSize: 100,
+                                            depth: 45
+                                        }
+                                    },
+                                    series: [{
+                                        name: 'Head counts',
+                                        data: [
+                                            ['8 (100%)', 13],
+                                            ['7 (87.5%)', 34],
+                                            ['6 (75%)', 30],
+                                            ['5 (62.5%)', 11],
+                                            ['4 (50%)', 7],
+                                            ['3 (37.5%)', 3],
+                                            ['2 (25%)', 0],
+                                            ['1 (12.5%)', 1],
+                                            ['0 (0%)', 0]
+                                        ]
+                                    }]
+                                });
+                            </script>
+                        </body>
+
+
+
+                    </div>
+
 
                 </section>
                 <br><br><br>
+
+                <section>
+                    <br><br>
+                    <h2 lass="mt-0 heading-border-top font-weight-normal"><b>Higher tolerance for acquaintances
+                        </b></h2>
+
+                    <div id="depends5" style="min-width: 310px; height:400px;margin:0px">
+                        <figure><img src="assets/images/pie.png" alt=""></figure>
+                    </div>
+
+                </section>
+
+                <section>
+                    <br><br>
+                    <h2 lass="mt-0 heading-border-top font-weight-normal"><b>Awareness of multiple sources for help seeking
+                            </b></h2>
+
+                    <div id="ideal source" style="min-width: 310px; height:400px;margin:0px">
+
+                        <head>
+                            <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+                            <meta name="viewport" content="width=device-width, initial-scale=1">
+                            <title>Highcharts Example</title>
+
+                            <style type="text/css">
+
+                            </style>
+                        </head>
+
+                        <body>
+
+                            <div id="container6" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+
+
+
+                            <script type="text/javascript">
+                                Highcharts.setOptions({
+                                    colors: ['#BE1622', '#769A99']
+                                });
+                                Highcharts.chart('container6', {
+                                    chart: {
+                                        type: 'bar'
+                                    },
+                                    title: {
+                                        text: 'Sources of Sex Education: Reality VS Ideal'
+                                    },
+                                    xAxis: {
+                                        categories: [
+                                            'Books',
+                                            'Family',
+                                            'Friends',
+                                            'Internet',
+                                            'NGO',
+                                            'School',
+                                            'Government',
+                                            'Others'
+                                        ],
+                                        crosshair: true
+                                    },
+                                    yAxis: {
+                                        min: 0,
+                                        title: {
+                                            text: 'Number of Counts'
+                                        }
+                                    },
+                                    tooltip: {
+                                        headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+                                        pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+                                            '<td style="padding:0"><b>{point.y} </b></td></tr>',
+                                        footerFormat: '</table>',
+                                        shared: true,
+                                        useHTML: true
+                                    },
+                                    plotOptions: {
+                                        column: {
+                                            pointPadding: 0.2,
+                                            borderWidth: 0
+                                        }
+                                    },
+                                    series: [{
+                                        name: 'Reality',
+                                        data: [11, 50, 15, 32, 1, 89, 0, 1]
+
+                                    }, {
+                                        name: 'Ideal',
+                                        data: [15, 88, 4, 15, 1, 98, 3, 1]
+
+                                    }]
+                                });
+                            </script>
+                        </body>
+
+
+                    </div>
+
+                </section>
+
+                <section>
+                    <br><br>
+                    <h2 lass="mt-0 heading-border-top font-weight-normal"><b>Sex education: Distance between ideal and reality
+                            </b></h2>
+
+                    <div id="ideal age" style="min-width: 310px; height:400px;margin:0px">
+
+                        <head>
+                            <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+                            <meta name="viewport" content="width=device-width, initial-scale=1">
+                            <title>Highcharts Example</title>
+
+                            <style type="text/css">
+
+                            </style>
+                        </head>
+
+                        <body>
+
+
+                            <div id="container" style="min-width: 310px; max-width: 800px; height: 400px; margin: 0 auto"></div>
+
+                            <head>
+                                <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+                                <meta name="viewport" content="width=device-width, initial-scale=1">
+                                <title>Highcharts Example</title>
+
+                                <style type="text/css">
+
+                                </style>
+                            </head>
+
+                            <body>
+
+                                <script type="text/javascript">
+                                    Highcharts.setOptions({
+                                        colors: ['#BE1622', '#769A99', '#D4DCE1', '#3C3C3B']
+                                    });
+
+                                    Highcharts.chart('container', {
+                                        chart: {
+                                            type: 'bar'
+                                        },
+                                        title: {
+                                            text: 'Perception on Age of Receiving Sex Education'
+                                        },
+                                        xAxis: {
+                                            categories: ['Reality', 'Ideal', '13-15', '16-18'],
+                                            title: {
+                                                text: "Comparison"
+                                            }
+                                        },
+                                        yAxis: {
+                                            min: 0,
+                                            title: {
+                                                text: 'Age of Receiving Sex Education'
+                                            }
+                                        },
+                                        legend: {
+                                            reversed: true
+                                        },
+                                        plotOptions: {
+                                            series: {
+                                                stacking: 'normal'
+                                            }
+                                        },
+                                        series: [{
+                                            name: 'Under 6',
+                                            data: [21, 68]
+                                        }, {
+                                            name: '6-12',
+                                            data: [41, 27]
+                                        }, {
+                                            name: '13-15',
+                                            data: [31, 2]
+                                        }, {
+                                            name: '16-18',
+                                            data: [6, 2]
+                                        }]
+                                    });
+                                </script>
+                            </body>
+
+                    </div>
+
+                    <div id="ideal age" style="min-width: 310px; height:400px;margin:0px">
+
+                        <head>
+                            <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+                            <meta name="viewport" content="width=device-width, initial-scale=1">
+                            <title>Highcharts Example</title>
+
+                            <style type="text/css">
+
+                            </style>
+                        </head>
+
+                        <body>
+                            <script src="../Highcharts-7.0.3/code/highcharts.js"></script>
+                            <script src="../Highcharts-7.0.3/code/modules/exporting.js"></script>
+                            <script src="../Highcharts-7.0.3/code/modules/export-data.js"></script>
+
+                            <div id="container" style="min-width: 310px; max-width: 800px; height: 400px; margin: 0 auto"></div>
+
+
+
+                            <script type="text/javascript">
+                                Highcharts.setOptions({
+                                    colors: ['#BE1622', '#769A99', '#D4DCE1', '#3C3C3B']
+                                });
+
+                                Highcharts.chart('container', {
+                                    chart: {
+                                        type: 'bar'
+                                    },
+                                    title: {
+                                        text: 'Perception on Age of Receiving Sex Education'
+                                    },
+                                    xAxis: {
+                                        categories: ['Reality', 'Ideal', '13-15', '16-18'],
+                                        title: {
+                                            text: "Comparison"
+                                        }
+                                    },
+                                    yAxis: {
+                                        min: 0,
+                                        title: {
+                                            text: 'Age of Receiving Sex Education'
+                                        }
+                                    },
+                                    legend: {
+                                        reversed: true
+                                    },
+                                    plotOptions: {
+                                        series: {
+                                            stacking: 'normal'
+                                        }
+                                    },
+                                    series: [{
+                                        name: 'Under 6',
+                                        data: [21, 68]
+                                    }, {
+                                        name: '6-12',
+                                        data: [41, 27]
+                                    }, {
+                                        name: '13-15',
+                                        data: [31, 2]
+                                    }, {
+                                        name: '16-18',
+                                        data: [6, 2]
+                                    }]
+                                });
+                            </script>
+                        </body>
+
+                    </div>
+
+
+                    <div id="age source" style="min-width: 310px; height:400px;margin:0px">
+
+                        <head>
+                            <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+                            <meta name="viewport" content="width=device-width, initial-scale=1">
+                            <title>Highcharts Example</title>
+
+                            <style type="text/css">
+
+                            </style>
+                        </head>
+
+                        <body>
+
+
+                            <div id="container8" style="min-width: 310px; max-width: 800px; height: 400px; margin: 0 auto"></div>
+
+
+
+                            <script type="text/javascript">
+                                Highcharts.setOptions({
+                                    colors: ['#BE1622', '#769A99', '#D4DCE1', '#3C3C3B']
+                                });
+                                Highcharts.chart('container8', {
+                                    chart: {
+                                        type: 'bar'
+                                    },
+                                    title: {
+                                        text: 'Age & Source of Sex Edu'
+                                    },
+                                    xAxis: {
+                                        categories: ['Under 6', '6-12', '13-15', '16-18'],
+                                        title: {
+                                            text: "Age of Receiving Sex Education"
+                                        }
+                                    },
+                                    yAxis: {
+                                        min: 0,
+                                        title: {
+                                            text: 'Source of Sex Education'
+                                        }
+                                    },
+                                    legend: {
+                                        reversed: true
+                                    },
+                                    plotOptions: {
+                                        series: {
+                                            stacking: 'normal'
+                                        }
+                                    },
+                                    series: [{
+                                        name: 'Family',
+                                        data: [1, 1, 1, 1]
+                                    }, {
+                                        name: 'Family & School',
+                                        data: [21, 22, 2, 2]
+                                    }, {
+                                        name: 'School',
+                                        data: [0, 17, 24, 2]
+                                    }, {
+                                        name: 'Others',
+                                        data: [0, 1, 4, 1]
+                                    }]
+                                });
+                            </script>
+                        </body>
+
+
+                    </div>
+
+
+
+                </section>
+
+                <br><br>
                 <section>
 
                     <h2 class="mt-0 heading-border-top font-weight-normal"><b>Sex Education in Hong Kong</b></h2>
                     <p>植入文本
                     </p>
 
+                </section>
 
-
+                <section>
                     <!-- 引用來源 -->
                     <div class="container">
                         <div class="row">
@@ -345,35 +1055,8 @@
                     </p>
 
 
-                    <br>
-
-                    <script id="infogram_0_889a578f-7152-4df1-90a6-ff90968c6d91" title="有關性教育" src="https://e.infogram.com/js/dist/embed.js?J1p" type="text/javascript"></script><iframe scrolling="no" frameborder="0" allowfullscreen="" style="border: none; width: 477px; height: 269px;" src="https://e.infogram.com/889a578f-7152-4df1-90a6-ff90968c6d91?src=embed#async_embed" title="有關性教育"></iframe>
-                    <div style="padding:8px 0;font-family:Arial!important;font-size:13px!important;line-height:15px!important;text-align:center;border-top:1px solid #dadada;margin:0 30px"><a href="https://infogram.com/889a578f-7152-4df1-90a6-ff90968c6d91" style="color:#989898!important;text-decoration:none!important;" target="_blank">有關性教育</a><br><a href="https://infogram.com" style="color:#989898!important;text-decoration:none!important;"
-                            target="_blank" rel="nofollow">Infogram</a></div>
-                    <br><br>
-                    <p>
-                        植入文本
-                    </p>
 
 
-                    <!-- 社工 -->
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-5 pr-md-5 pr-sm-0">
-                                <img class="img1 img-fluid" src="https://Annieqq.github.io/DDS_III_C_三個小朋友/assets/images/sw.jpg" style="border-radius:50%;width:150px;height:150px">
-                                <p> <small>香港防止虐待兒童會<br>一名不願意透露姓名的社工
-                                        </small></p>
-                            </div>
-                            <div class="col-md-7 pr-md-5 pr-sm-0">
-                                <p><span class="bigger" style="font-size:300%">“</span>引用文本
-                                    <br><span class="bigger" style="font-size:300%">”</span></p>
-                            </div>
-                        </div>
-
-                        <div>
-                            <p> 植入文本 </p>
-                        </div>
-                    </div>
 
                 </section>
 
@@ -526,7 +1209,7 @@
         $.getJSON('https://midorillusion.github.io/group_project/assets/Hong_Kong_18_Districts.geojson', function(geojson) {
 
             // Initiate the chart
-            Highcharts.mapChart('container0', {
+            Highcharts.mapChart("container0", {
                 chart: {
                     map: geojson
                 },
@@ -576,6 +1259,6 @@
 
 
 
-</body>
+    </body>
 
 </html>
