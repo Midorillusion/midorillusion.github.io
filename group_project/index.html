@@ -24,6 +24,19 @@
             font-size: 2em;
         }
         
+        #container {
+            height: 500px;
+            min-width: 310px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .loading {
+            margin-top: 10em;
+            text-align: center;
+            color: gray;
+        }
+        
         .acts {
             position: relative;
             width: 50%;
@@ -128,10 +141,7 @@
                         <!-- <h2 class="mt-0 heading-border-top mb-3 font-weight-normal">Background information of FDI in China</h2> -->
 
                         <!-- 左 统计数据图 -->
-                        <div class="col-md-6 pr-md-5 pr-sm-0">
-                            <img class="img1 img-fluid" src="https://Annieqq.github.io/DDS_III_C_三個小朋友/assets/images/5_year.png">
 
-                        </div>
                         <div class="col-md-6 pr-md-5 pr-sm-0">
 
 
@@ -150,6 +160,13 @@
                                 <br>The vulnerable situation for children and female teenagers over 20% of cases involved a victim that was under the age of 16 years old when the assault happened 45.1% of under 16-year-old cases involved a perpetrator
                                 that is a family member or relatives victims under the age of 16 in average delay their reporting for assistance for 4,814 days (approx. 13.2 years)</p>
                         </div>
+                        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+                        <script src="https://code.highcharts.com/maps/highmaps.js"></script>
+                        <script src="https://code.highcharts.com/maps/modules/data.js"></script>
+                        <script src="https://code.highcharts.com/maps/modules/exporting.js"></script>
+                        <script src="https://code.highcharts.com/maps/modules/offline-exporting.js"></script>
+
+                        <div id="container"></div>
 
 
                     </div>
