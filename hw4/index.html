@@ -1,0 +1,134 @@
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Highcharts Example</title>
+    <style>
+        body {
+            font-size: 20px;
+            background-color: rgb(255, 250, 244)
+        }
+        
+        h1 {
+            font-size: 5rem;
+            text-align: center;
+            margin: 0;
+            padding: 0.5em;
+            border: blanchedalmond 2em;
+        }
+        
+        h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin: 0;
+            padding: 0.5em;
+            border: blanchedalmond 2em;
+        }
+    </style>
+    <style type="text/css">
+        #container {
+            min-width: 310px;
+            max-width: 800px;
+            height: 400px;
+            margin: 0 auto
+        }
+    </style>
+</head>
+
+<body>
+    <script src="../../midorillusion.github.io/Highcharts-7.0.3/code/highcharts.js"></script>
+    <script src="../../midorillusion.github.io/Highcharts-7.0.3/code/modules/series-label.js"></script>
+    <script src="../../midorillusion.github.io/Highcharts-7.0.3/code/modules/exporting.js"></script>
+    <script src="../../midorillusion.github.io/Highcharts-7.0.3/code/modules/export-data.js"></script>
+
+    <h1>Rise in Global Phone Sales Within A Decade</h1>
+    <h2> Background Report
+    </h2>
+    <p>On Jan 25, 2019, South China Morning Post released an article named "Why your smartphone is causing you ‘text neck’ syndrome", talking about how the increase of using smart phones affect our lifestyle and health condition. <br><br> To prove the trend
+        of mobile phones becoming essential to our daily lives, the author Pablo Robles generated an infographic presenting the increase in global mobile sales from 2007 to 2017.
+
+    </p>
+
+
+    <div>
+        <br>
+        <img src="https://midorillusion.github.io/hw4/images/info.png" width="100%" alt="Null" position="center">
+        <a href="https://multimedia.scmp.com/lifestyle/article/2183329/text-neck/" target="_blank">Reference</a>
+    </div>
+    <br>
+    <h2>Area For Improvement</h2>
+    <p>The infographic above is simple and straightforwad, indicating the rise in sales with the increasing area of semicircles every five years. Nonetheless, the speed of growing sales is not clearly presented, which makes it difficult for the audience
+        to see if the sales are growing faster.</p>
+    <br>
+    <h2>Possible Suggestion</h2>
+    <p>
+        To better compare the growing speed in the first half decade and the second half, a line graph can be employed.
+    </p>
+    <div id="container"></div>
+
+    <script type="text/javascript">
+        Highcharts.chart('container', {
+
+            title: {
+                text: 'Global Mobile Sales, 2007-2017'
+            },
+
+            subtitle: {
+                text: 'Source: multimedia.scmp.com/lifestyle/article/2183329/text-neck'
+            },
+
+            yAxis: {
+                title: {
+                    text: 'Number of Global Mobile Sales'
+                }
+            },
+
+            xAxis: {
+                title: {
+                    text: 'Year'
+                }
+
+            },
+
+            legend: {
+                layout: 'vertical',
+                align: 'right',
+                verticalAlign: 'middle'
+            },
+
+            plotOptions: {
+                series: {
+                    label: {
+                        connectorAllowed: false
+                    },
+                    pointStart: 2007,
+                    pointInterval: 5,
+
+                }
+            },
+
+            series: [{
+                name: 'Global Mobile Sales',
+                data: [122000000, 680000000, 1500000000]
+            }, ],
+
+            responsive: {
+                rules: [{
+                    condition: {
+                        maxWidth: 500
+                    },
+                    chartOptions: {
+                        legend: {
+                            layout: 'horizontal',
+                            align: 'center',
+                            verticalAlign: 'bottom'
+                        }
+                    }
+                }]
+            }
+
+        });
+    </script>
+    <p>
+        From the slope of the lines in the new infographic, we can tell that the increasing rate stays similar for 2007-2012 and 2012-2017, with the latter slighly higher than the former.
+    </p>
+</body>
